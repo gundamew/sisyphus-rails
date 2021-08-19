@@ -1,24 +1,25 @@
-# README
+# Sisyphus Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> “The workman of today works every day in his life at the same tasks, and this fate is no less absurd. But it is tragic only at the rare moments when it becomes conscious.”
+>
+> Albert Camus, *The Myth of Sisyphus*
 
-Things you may want to cover:
+## Requirement
 
-* Ruby version
+Tested on Docker Desktop for Mac 3.3.3 (64133) / Docker Engine 20.10.6 / Docker Compose 1.29.1
 
-* System dependencies
+## Instruction
 
-* Configuration
+### 1. Build the app image
 
-* Database creation
+```shell
+$ docker-compose build app
+```
 
-* Database initialization
+### 2. Create the database
 
-* How to run the test suite
+```shell
+$ docker-compose run app rake db:create
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 3. Use `http://localhost:300` to access the application.
